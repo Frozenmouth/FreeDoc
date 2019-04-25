@@ -19,5 +19,5 @@ end
   appointment = Appointment.create!(date: Faker::Time.between(DateTime.now, DateTime.now + 1), patient_id: Faker::Number.between(Patient.first.id, Patient.last.id), doctor_id: Faker::Number.between(Doctor.first.id, Doctor.last.id))
 end
 4.times do
-	Speciality.create!(title: Faker::Military.navy_rank, description: Faker::Simpsons.quote, doctor_id: rand(1..10))
+	Speciality.create!(title: Faker::Military.navy_rank, description: Faker::TvShows::Simpsons.quote, doctor_id: rand(1..10))
 end
